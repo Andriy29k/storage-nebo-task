@@ -158,7 +158,7 @@ Via Azure Portal:
 
 Example Log Analytics query:
 ```bash
-kqlStorageBlobLogs
+StorageBlobLogs
 | where OperationName contains "GetBlob" or OperationName contains "PutBlob"
 | project TimeGenerated, OperationName, CallerIpAddress, StatusCode
 | order by TimeGenerated desc
